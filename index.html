@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Content</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- welcome -->
+    <header>
+      <h1 class="fw-bold text-success bg-dark border border-2 border-danger text-center p-3 m-1">Welcome to Guessing Number Game</h1>
+    </header>
+
+    <!-- introduction -->
+    <div class="bg-dark border border-2 border-danger p-3 text-white m-1">
+      <h2 class="text-success">Introduction</h2>
+      <ul>
+        <li>You have 10 chances to guess the number</li>
+        <li>The nubmer is between 1 an 100</li>
+        <li>If you guess it right you win, else you lose</li>
+      </ul>
+    </div>
+
+    <!-- message box -->
+    <div class="bg-dark border border-2 border-danger p-3 text-white m-1">
+      <h2 class="text-success">Message Box</h2>
+      <p id="message" class="fw-bold">This is the hint message</p>
+    </div>
+
+    <!-- input box -->
+    <div class="bg-dark border border-2 border-danger p-3 text-white m-1">
+      <h2 class="text-success">Input Number</h2>
+      <h5 >You have  <span id="count-message" class="text-success">10</span> chances left...</h5>
+      <form>
+        <div class="input-group my-3" style="height: 60px;">
+          <input type="number" class="form-control fw-bold" placeholder="Input Your Number" aria-label="Recipient's username" aria-describedby="button-addon2" id="number" required>
+          <button class="btn btn-outline-secondary bg-success text-white px-4" type="button" id="btn-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- inputed number -->
+    <div class="bg-dark border border-2 border-danger p-3 text-white m-1">
+      <p>Your numbers: <span id="inputed-number"></span></p>
+    </div>
+
+    <!-- back and new game button -->
+    <div class="bg-dark border border-2 border-danger p-3 text-white m-1 d-flex justify-content-between ">
+      <button class="btn btn-danger">
+        Back
+      </button>
+      <button id="btn-new-game"  class="btn btn-success">
+        New Game
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const number = document.getElementById("number");
+      const btnSubmit = document.getElementById("btn-submit");
+      const message = document.getElementById("message");
+      const inputedNumber = document.getElementById("inputed-number");  
+      const countMessage = document.getElementById("count-message");
+      const btnNewGame = document.getElementById("btn-new-game");
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      let count = 10;
+
+      btnSubmit.addEventListener("click", function () {
+        const inputNumber = number.value;
+        
+        if(count==1){
+          countMessage.innerHTML = "no more";
+          message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ";
+          message.classList.add("text-danger");
+          return;
+        }
+
+        if(isNaN(number.value)){
+          message.innerHTML += "<br>Please input a number";
+          return;
+        }
+        if(number.value<1 || number.value>100){
+          message.innerHTML += "<br> Please input a number between 1 and 100";
+          return;
+        }
+
+        count--;
+       
+        if (inputNumber == randomNumber) {
+          message.innerHTML = "You Win";
+        } else if(inputNumber > randomNumber){
+          message.innerHTML = "Your number is too high";
+        }else{
+          message.innerHTML = "Your number is too low";
+        }
+        inputedNumber.innerHTML += inputNumber + ", ";
+        countMessage.innerHTML = count;
+        number.value = "";
+        if(count<=5 && count>3){
+          countMessage.classList.remove("text-success");
+          countMessage.classList.add("text-warning");
+        }else if(count<=3){
+          countMessage.classList.remove("text-warning");
+          countMessage.classList.add("text-danger");
+        }
+      
+      });
+
+      btnNewGame.addEventListener("click", function(){
+        window.location.reload();
+      })
+     
+    </script>
+
+  </body>
+</html>
