@@ -92,6 +92,9 @@
           countMessage.innerHTML = "no more";
           message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ";
           message.classList.add("text-danger");
+          setInterval(function(){
+            window.location.reload();
+          }, 4000);
           return;
         }
 
@@ -108,6 +111,9 @@
        
         if (inputNumber == randomNumber) {
           message.innerHTML = "You Win";
+          setInterval(function(){
+            window.location.reload();
+          }, 4000);
         } else if(inputNumber > randomNumber){
           message.innerHTML = "Your number is too high";
         }else{
