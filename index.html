@@ -91,12 +91,12 @@
         
         if(count==1){
           countMessage.innerHTML = "no more";
-          message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ";
+          message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ​​​ <br> Correct number is " + randomNumber;
           message.classList.add("text-danger");
           setInterval(function(){
             alert("You Lose... កាកឆុយម៉ាយហើយ");
             window.location.reload();
-          }, 4000);
+          }, 3000);
           return;
         }
 
@@ -112,11 +112,17 @@
         count--;
        
         if (inputNumber == randomNumber) {
-          message.innerHTML = "You Win... អបអរសាទរ ពូកែមែនកូនប៉ាៗ";
+          if(count>5){
+            message.innerHTML = "You Win... អបអរសាទរ ពូកែមែនកូនប៉ាៗ";
+          }else if(count > 3){
+            message.innerHTML = "You Win... គ្រាន់បើអាកូនប៉ា";
+          }else{
+            message.innerHTML = "You Win... ខ្មោចអោយទេហែងនឹង";
+          }
           setInterval(function(){
             alert("You Win");
             window.location.reload();
-          }, 4000);
+          }, 3000);
         } else if(inputNumber > randomNumber){
           message.innerHTML = "Your number is too high";
         }else{
