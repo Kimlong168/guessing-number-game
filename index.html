@@ -32,7 +32,7 @@
       <h2 class="text-success">Introduction</h2>
       <ul>
         <li>You have 10 chances to guess the number</li>
-        <li>The nubmer is between 1 an 100</li>
+        <li>The nubmer is between 1 and 100</li>
         <li>If you guess it right you win, else you lose</li>
       </ul>
     </div>
@@ -69,6 +69,7 @@
         New Game
       </button>
     </div>
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -93,6 +94,7 @@
           message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ";
           message.classList.add("text-danger");
           setInterval(function(){
+            alert("You Lose... កាកឆុយម៉ាយហើយ");
             window.location.reload();
           }, 4000);
           return;
@@ -112,6 +114,7 @@
         if (inputNumber == randomNumber) {
           message.innerHTML = "You Win";
           setInterval(function(){
+            alert("You Win");
             window.location.reload();
           }, 4000);
         } else if(inputNumber > randomNumber){
@@ -133,6 +136,7 @@
       });
 
       btnNewGame.addEventListener("click", function(){
+        alert("New Game");
         window.location.reload();
       })
      
