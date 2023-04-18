@@ -93,7 +93,7 @@
           countMessage.innerHTML = "no more";
           message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ​​​ <br> Correct number is " + randomNumber;
           message.classList.add("text-danger");
-          setInterval(function(){
+          setTimeout(function(){
             alert("You Lose... កាកឆុយម៉ាយហើយ");
             window.location.reload();
           }, 3000);
@@ -119,7 +119,7 @@
           }else{
             message.innerHTML = "You Win... ខ្មោចអោយទេហែងនឹង";
           }
-          setInterval(function(){
+          setTimeout(function(){
             alert("You Win");
             window.location.reload();
           }, 3000);
