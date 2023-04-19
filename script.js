@@ -49,7 +49,7 @@ btnSubmit.addEventListener("click", () => {
     if(count>5){
       message.innerHTML = "You Win... អបអរសាទរ ពូកែមែនកូនប៉ាៗ";
     }else if(count > 3){
-      message.innerHTML = "You Win... គ្រាន់បើអាកូនប៉ា";
+      message.innerHTML = "You Win...អបអរសាទរ គ្រាន់បើអាកូនប៉ា";
     }else{
       message.innerHTML = "You Win... ខ្មោចអោយទេហែងនឹង";
     }
