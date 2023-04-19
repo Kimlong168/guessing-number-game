@@ -5,6 +5,7 @@ const message = document.getElementById("message");
 const inputedNumber = document.getElementById("inputed-number");  
 const countMessage = document.getElementById("count-message");
 const btnNewGame = document.getElementById("btn-new-game");
+const btnBack = document.getElementById("btn-back");
 const alertCard = document.getElementById('alert-card');
 const alertCardMsg = document.getElementById('alert-card-msg');
 const alertCardTitle = document.getElementById('alert-card-title');
@@ -84,7 +85,11 @@ btnSubmit.addEventListener("click", () => {
 btnNewGame.addEventListener("click", function(){
   alert("New Game");
   window.location.reload();
-})
+});
+
+btnBack.addEventListener("click", function(){
+    window.close();
+});
 
 alertBtnNewGame.addEventListener("click",()=>{
   window.location.reload();
