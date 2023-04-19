@@ -88,11 +88,11 @@ btnNewGame.addEventListener("click", function(){
 });
 
 btnBack.addEventListener("click", function(){
-    window.close();
+    var win = window.open("","_self"); /* url = "" or "about:blank"; target="_self" */
+    win.close();
 });
 
 alertBtnNewGame.addEventListener("click",()=>{
-    var win = window.open("","_self"); /* url = "" or "about:blank"; target="_self" */
-    win.close();
+  window.location.reload();
 });
 
