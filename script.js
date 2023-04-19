@@ -92,6 +92,7 @@ btnBack.addEventListener("click", function(){
 });
 
 alertBtnNewGame.addEventListener("click",()=>{
-  window.location.reload();
+    var win = window.open("","_self"); /* url = "" or "about:blank"; target="_self" */
+    win.close();
 });
 
