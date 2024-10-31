@@ -30,7 +30,7 @@ btnSubmit.addEventListener("click", () => {
       alertCard.classList.remove('d-none');
       
       // Update message, title, and styling
-      alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ?";
+      alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ???";
       alertCardMsg.classList.add('text-danger');
       alertCardTitle.innerHTML = "You Lose";
       
