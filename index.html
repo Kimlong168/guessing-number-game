@@ -11,14 +11,16 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-
     <!-- welcome -->
     <header>
-      <h1 class="fw-bold text-warning bg-dark border border-2 border-danger text-center p-3 m-1">Guessing Number Game</h1>
+      <h1
+        class="fw-bold text-warning bg-dark border border-2 border-danger text-center p-3 m-1"
+      >
+        Guessing Number Game
+      </h1>
     </header>
 
     <!-- introduction -->
@@ -40,11 +42,28 @@
     <!-- input box -->
     <div class="bg-dark border border-2 border-danger p-3 text-white m-1">
       <h2 class="text-success">Input Number</h2>
-      <h5 >You have  <span id="count-message" class="text-success">10</span> chances left...</h5>
+      <h5>
+        You have <span id="count-message" class="text-success">10</span> chances
+        left...
+      </h5>
       <form>
-        <div class="input-group my-3" style="height: 60px;">
-          <input type="number" class="form-control fw-bold" placeholder="Input Your Number" aria-label="Recipient's username" aria-describedby="button-addon2" id="number" required>
-          <button class="btn btn-outline-secondary bg-success text-white px-4" type="button" id="btn-submit">Submit</button>
+        <div class="input-group my-3" style="height: 60px">
+          <input
+            type="number"
+            class="form-control fw-bold"
+            placeholder="Input Your Number"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+            id="number"
+            required
+          />
+          <button
+            class="btn btn-outline-secondary bg-success text-white px-4"
+            type="button"
+            id="btn-submit"
+          >
+            Guess
+          </button>
         </div>
       </form>
     </div>
@@ -55,28 +74,71 @@
     </div>
 
     <!-- back and new game button -->
-    <div class="bg-dark border border-2 border-danger p-3 text-white m-1 d-flex justify-content-between ">
-      <button id="btn-back" class="btn btn-danger">
-        Back
-      </button>
-      <button id="btn-new-game"  class="btn btn-success">
-        New Game
-      </button>
+    <div
+      class="bg-dark border border-2 border-danger p-3 text-white m-1 d-flex justify-content-between"
+    >
+      <button id="btn-back" class="btn btn-danger">Back</button>
+      <button id="btn-new-game" class="btn btn-success">New Game</button>
     </div>
 
+    <!-- footer -->
+
+    <footer style="margin: 20px">
+      <div class="container">
+        <div class="text-center">
+          Powerd by:
+          <small>
+            <a
+              href="https://www.facebook.com/phnompenhcrown.fc.7?mibextid=ZbWKwL"
+              >@Chann Kimlong</a
+            ></small
+          >
+        </div>
+      </div>
+      <!-- AddToAny BEGIN -->
+      <div class="mt-3 d-flex justify-content-center">
+        <!-- AddToAny BEGIN -->
+        <div
+          class="a2a_kit a2a_kit_size_32 a2a_default_style"
+          data-a2a-url="https://kimlong168.github.io/Tic-tac-toe-js/"
+          data-a2a-title="Tic Tac Toe"
+        >
+          <a class="a2a_button_facebook"></a>
+          <a class="a2a_button_telegram"></a>
+          <a class="a2a_button_line"></a>
+          <a class="a2a_button_facebook_messenger"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+      </div>
+
+      <script async src="https://static.addtoany.com/menu/page.js"></script>
+      <!-- AddToAny END -->
+    </footer>
 
     <!-- alert card -->
 
-    <div id="overlay" class="overlay d-none"></div> <!-- Dark background overlay -->
-    <div id="alert-card" class="card bg-dark border-2 border-white text-light fixed-top d-none" style="left: 50%; top: 30%; transform: translate(-50%, -30%); width: 18rem; z-index: 1050;">
+    <div id="overlay" class="overlay d-none"></div>
+    <!-- Dark background overlay -->
+    <div
+      id="alert-card"
+      class="card bg-dark border-2 border-white text-light fixed-top d-none"
+      style="
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -30%);
+        width: 18rem;
+        z-index: 1050;
+      "
+    >
       <div class="card-body">
         <h5 class="card-title" id="alert-card-title"></h5>
         <p class="card-text" id="alert-card-msg"></p>
-        <button id="alert-btn-new-game" class="btn btn-sm btn-primary">New Game</button>
+        <button id="alert-btn-new-game" class="btn btn-sm btn-primary">
+          New Game
+        </button>
       </div>
     </div>
-
-
 
     <!-- background sound -->
     <audio
@@ -87,10 +149,12 @@
       autoplay
       loop
     >
-      <source src="./asset/mp3/Vanthan x VannDa - កម្លោះស្រុកខ្មែរ (Khmer Gentlemen) [Official Video].mp3" />
+      <source
+        src="./asset/mp3/Vanthan x VannDa - កម្លោះស្រុកខ្មែរ (Khmer Gentlemen) [Official Video].mp3"
+      />
       This broswer doesn't support HTML5 audio
     </audio>
-  
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -98,7 +162,5 @@
     ></script>
 
     <script src="./script.js"></script>
-   
-
   </body>
 </html>
