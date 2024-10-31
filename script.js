@@ -22,21 +22,24 @@ btnSubmit.addEventListener("click", () => {
     message.innerHTML = "You Lose...​​​ <br> Correct number is " + randomNumber;
     message.classList.add("text-danger");
 
+    setTimeout(function() {
+    const alertCard = document.getElementById('alert-card');
+    const alertCardMsg = document.getElementById('alert-card-msg');
+    const alertCardTitle = document.getElementById('alert-card-title');
+    const overlay = document.getElementById('overlay');
   
-    setTimeout(function() {     
+    // Show overlay and alert card
+    overlay.classList.remove('d-none');
+    alertCard.classList.remove('d-none');
     
-      // Show overlay and alert card
-      overlay.classList.remove('d-none');
-      alertCard.classList.remove('d-none');
-      
-      // Update message, title, and styling
-      alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ???";
-      alertCardMsg.classList.add('text-danger');
-      alertCardTitle.innerHTML = "You Lose";
-      
-      // Prevent background scroll
-      document.body.style.overflow = "hidden";
-    }, 3000);
+    // Update message, title, and styling
+    alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ?";
+    alertCardMsg.classList.add('text-danger');
+    alertCardTitle.innerHTML = "You Lose";
+    
+    // Prevent background scroll
+    document.body.style.overflow = "hidden";
+  }, 3000);
 
     return;
   }
