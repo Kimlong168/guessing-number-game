@@ -67,13 +67,22 @@
 
     <!-- alert card -->
 
-    <div id="alert-card" class="card bg-dark border-2 border-white text-light fixed-top d-none" style="left:50%; top:30%; translate:-50%; width:18rem">
-      <div class="card-body">
-        <h5 class="card-title" id="alert-card-title"></h5>
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light border-2 border-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alert-card-title"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <p class="card-text" id="alert-card-msg"></p>
-        <button id="alert-btn-new-game" class="btn btn-sm btn-primary">New Game</button>
+      </div>
+      <div class="modal-footer">
+        <button id="alert-btn-new-game" class="btn btn-primary btn-sm">New Game</button>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- background sound -->
     <audio
