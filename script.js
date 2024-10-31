@@ -24,9 +24,9 @@ btnSubmit.addEventListener("click", () => {
   
 
     setTimeout(function(){
-      // alert("You Lose... កាកឆុយម៉ាយហើយ");
+     
       alertCard.classList.remove("d-none");
-      alertCardMsg.innerHTML = "កាកឆុយម៉ាយហើយ!!!";
+      alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ?";
       alertCardMsg.classList.add('text-danger');
       alertCardTitle.innerHTML ="You Lose";
       document.body.style.overflow="hidden";
@@ -51,7 +51,7 @@ btnSubmit.addEventListener("click", () => {
     }else if(count > 3){
       message.innerHTML = "You Win...អបអរសាទរ គ្រាន់បើអាកូនប៉ា";
     }else{
-      message.innerHTML = "You Win... ខ្មោចអោយទេហែងនឹង";
+      message.innerHTML = "You Win... ខ្មោចអោយទេនឹង";
     }
     message.classList.add("text-warning");
 
