@@ -4,3 +4,28 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1040; /* Lower than alert card */
+  }
+
+  /* Card styling adjustments */
+  #alert-card {
+    position: fixed;
+    z-index: 1050; /* On top of overlay */
+    width: 18rem;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
+
+  .text-danger {
+    color: #dc3545 !important; /* Red color for danger text */
+  }
