@@ -18,7 +18,7 @@ btnSubmit.addEventListener("click", () => {
   
   if(count==1){
     countMessage.innerHTML = "no more";
-    message.innerHTML = "You Lose... កាកឆុយម៉ាយហើយ​​​ <br> Correct number is " + randomNumber;
+    message.innerHTML = "You Lose...​​​ <br> Correct number is " + randomNumber;
     message.classList.add("text-danger");
 
   
