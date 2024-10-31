@@ -10,6 +10,7 @@ const alertCard = document.getElementById('alert-card');
 const alertCardMsg = document.getElementById('alert-card-msg');
 const alertCardTitle = document.getElementById('alert-card-title');
 const alertBtnNewGame = document.getElementById('alert-btn-new-game');
+const overlay = document.getElementById('overlay');
 const randomNumber = Math.floor(Math.random() * 100) + 1;
 let count = 10;
 
@@ -22,11 +23,7 @@ btnSubmit.addEventListener("click", () => {
     message.classList.add("text-danger");
 
   
-    setTimeout(function() {
-      const alertCard = document.getElementById('alert-card');
-      const alertCardMsg = document.getElementById('alert-card-msg');
-      const alertCardTitle = document.getElementById('alert-card-title');
-      const overlay = document.getElementById('overlay');
+    setTimeout(function() {     
     
       // Show overlay and alert card
       overlay.classList.remove('d-none');
