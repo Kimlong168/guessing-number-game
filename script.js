@@ -22,15 +22,25 @@ btnSubmit.addEventListener("click", () => {
     message.classList.add("text-danger");
 
   
-
-    setTimeout(function(){
-     
-      alertCard.classList.remove("d-none");
+    setTimeout(function() {
+      const alertCard = document.getElementById('alert-card');
+      const alertCardMsg = document.getElementById('alert-card-msg');
+      const alertCardTitle = document.getElementById('alert-card-title');
+      const overlay = document.getElementById('overlay');
+    
+      // Show overlay and alert card
+      overlay.classList.remove('d-none');
+      alertCard.classList.remove('d-none');
+      
+      // Update message, title, and styling
       alertCardMsg.innerHTML = "ហ្គេមចឹងក៏លេងមិនឈ្នះដែរ?";
       alertCardMsg.classList.add('text-danger');
-      alertCardTitle.innerHTML ="You Lose";
-      document.body.style.overflow="hidden";
+      alertCardTitle.innerHTML = "You Lose";
+      
+      // Prevent background scroll
+      document.body.style.overflow = "hidden";
     }, 3000);
+
     return;
   }
 
